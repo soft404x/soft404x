@@ -1,9 +1,18 @@
 <p align="center">
-  <img
-    src="https://raw.githubusercontent.com/BUNLENG69/BUNLENG69/output/pacman-contribution-graph.svg"
-    alt="Pac-Man contribution graph"
-    width="100%"
-  />
+  <picture>
+    <source
+      media="(prefers-color-scheme: dark)"
+      srcset="https://raw.githubusercontent.com/soft404x/soft404x/output/pacman-contribution-graph-dark.svg"
+    >
+    <source
+      media="(prefers-color-scheme: light)"
+      srcset="https://raw.githubusercontent.com/soft404x/soft404x/output/pacman-contribution-graph.svg"
+    >
+    <img
+      alt="Pac-Man contribution graph"
+      src="https://raw.githubusercontent.com/soft404x/soft404x/output/pacman-contribution-graph.svg"
+    >
+  </picture>
 </p>
 
 <h1 align="center">Yong Bunleng</h1>
