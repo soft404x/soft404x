@@ -2,7 +2,7 @@ name: Generate Pac-Man
 
 on:
   schedule:
-    - cron: "47 7 * * *"
+    - cron: "0 0 * * *"
 
   workflow_dispatch:
 
@@ -16,19 +16,18 @@ jobs:
       contents: write
 
     runs-on: ubuntu-latest
+    timeout-minutes: 20
 
     steps:
-      - uses: actions/checkout@v4
-
       - name: Generate Pac-Man contribution graph
         uses: abozanona/pacman-contribution-graph@main
         with:
-          github_user_name: BUNLENG69
-          theme: github
-          output: dist/pacman-contribution-graph.svg
+          github_user_name: ${{ github.repository_owner }}
+          games: pacman
+          hide_month_labels: "false"
 
       - name: Push Pac-Man graph
-        uses: crazy-max/ghaction-github-pages@v4
+        uses: crazy-max/ghaction-github-pages@v3.1.0
         with:
           target_branch: output
           build_dir: dist
